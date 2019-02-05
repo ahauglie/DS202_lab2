@@ -1,0 +1,27 @@
+---
+title: "Alicia Hauglie, ahauglie"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+head(choco)
+```
+1. How are ratings distributed? Draw a histogram of ratings and describe it. Don’t forget to mention outliers, if there are any.
+```{r}
+hist(choco$Rating)
+```
+
+
+The graph shows that the ratings are slightly left skewed, centered around a rating of about 3.25. There is an outlier at 5 and a few outliers around 1. 
+
+2. Do ratings depend on the cacao percentage of a chocolate bar?
+```{r}
+plot(choco$Rating, choco$Cocoa.Pct)
+```
+
+
+No, there is no correlation between cocolate rating and cocoa percentage.
