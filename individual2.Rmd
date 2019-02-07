@@ -1,0 +1,26 @@
+---
+title: "individual2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+head(choco)
+```
+
+
+1. How are ratings distributed? Draw a histogram of ratings and describe it. Don’t forget to mention outliers, if there are any.
+```{r}
+hist(choco$Rating)
+#The histogram shows that the average rating is around 3.25, and is similar to a bell shape. There is an outlier between 4.5 and 5, and most ratings of the cocoa are between 2.5 and 4. The graph is also left swkewed.
+```
+
+2. Do ratings depend on the cacao percentage of a chocolate bar
+```{r}
+plot(choco$Rating, choco$Cocoa.Pct)
+#The graph doesn't show a correlation so the Cocoa percentage does not depend on the Rating of the Cocoa. 
+```
