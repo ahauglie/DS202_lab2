@@ -5,11 +5,17 @@ date: "2/5/2019"
 output: html_document
 ---
 
+github repo: https://github.com/ahauglie/DS202_lab2
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 1. What is the overall number of chocolate bars rated?
+``` {r}
+
+```
 
 2. How does the number of ratings depend on the year? Draw a bar chart of the number of reports.
 
@@ -18,3 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 4. Brainstorm and write down an interesting question that can be answer from the dataset. The question should not duplicate the questions above.
 
 5. Answer the question from the dataset.
+
+
+
+****paragraph commenting on the workflow*****
