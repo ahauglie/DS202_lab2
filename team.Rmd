@@ -32,8 +32,21 @@ year<- choco$Review.Date
 barplot(table(year))
 ```
 3. How do ratings compare across different company locations? Focus on the three locations with the most ratings. (Hint: They are U.S.A., France, and Canada, but find them out using codes.)
+```{r}
+top3 <- choco[choco$Company.Location == "U.S.A." | choco$Company.Location == "France" | choco$Company.Location == "Canada", ]
+str(top3)
+boxplot(top3$Rating ~ top3$Company.Location)
+top <- choco[choco$Rating %in% c("U.S.A.", "France", "Canada"),]
+plot(top$Company.Location, top$Rating)
 
-
+usa<- choco[choco$Company.Location == "U.S.A.",]
+france<- choco[choco$Company.Location == "France",]
+canada<- choco[choco$Company.Location == "Canada",]
+boxplot(usa$Rating, france$Rating, canada$Rating, xlab="Country", ylab="Rating", main="Rating Distribution of Top 3 Countries")
+topthree<-choco[choco$Company.Location %in% c("U.S.A.", "France", "Canada"),]
+str(topthree)
+boxplot(topthree$Rating~topthree$Company.Location, xlab="Country", ylab="Rating", main="Rating Distribution of Top 3 Countries", ann=TRUE)
+```
 4. Brainstorm and write down an interesting question that can be answer from the dataset. The question should not duplicate the questions above.
 
 5. Answer the question from the dataset.
