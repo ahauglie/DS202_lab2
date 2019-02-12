@@ -40,9 +40,14 @@ canada<- choco[choco$Company.Location == "Canada",]
 z <- c("USA", "France","Canada") 
 boxplot(usa$Rating, france$Rating, canada$Rating, xlab="Country", ylab="Rating", main="Rating Distribution of Top 3 Countries", names = z)
 ```
+
+
 The means are all pretty much identical, and the boxplot for Canada and USA are also very similar. This comparison shows that through the top 3 countries there is not much of a difference in Rating. 
 
+
 4. Brainstorm and write down an interesting question that can be answer from the dataset. The question should not duplicate the questions above.
+
+
 What are the top 5 places that the cocoa beans originate from?
 
 
@@ -53,4 +58,8 @@ head(sort(summary(beanOrigin), decreasing=TRUE),5)
 ```
 The top places the beans originate from are :Venezuela, Ecuador, Peru, Madagascar, Dominican Republic.
 
-****paragraph commenting on the workflow*****
+
+6. Paragraph commenting on workflow
+
+
+I did question 1-3 and pushed it, then Sam pulled it and did questions 4 & 5, pushed it, then I pulled it and typed this paragraph. It was not hard to work on it because we communicated about when each of us was making changes. 
